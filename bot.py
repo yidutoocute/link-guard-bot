@@ -4,7 +4,7 @@ import threading
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
 
 # 1. Setup a tiny Flask server to keep Render happy
-html_app = Flask(name)
+html_app = Flask(__name__)
 
 @html_app.route('/')
 def home():

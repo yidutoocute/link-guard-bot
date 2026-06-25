@@ -15,7 +15,13 @@ def run_flask():
 
 # 2. Your standard Telegram Bot logic
 async def start_command(update, context):
-    await update.message.reply_text("🛡️ LinkGuard active on Render!")
+    greeting = (
+        "Welcome to LinkGuard. 🛡️\n\n"
+        "This security system is active and monitoring. "
+        "Please send any link or web address directly to this chat, "
+        "and it will be scanned thoroughly for malicious content, phishing scams, or security threats."
+    )
+    await update.message.reply_text(greeting)
 
 async def monitor_messages(update, context):
     text = update.message.text
